@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 // name, type, weight, sets, reps, and duration of exercise.
 const WorkoutsDB = new Schema({
+  day: {
+    type: Date,
+    default: Date.now,
+  },
   exercises: [
     {
       type: {
