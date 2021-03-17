@@ -4,18 +4,14 @@ const router = express.Router();
 
 const Workouts = require("../models/workoutsModels.js");
 router.post("/api/workouts", (req, res) => {
-  //   console.log(JSON.stringify(req.body));
-  //   const newWorkout = new Workouts(req.body);
-  //   console.log(newWorkout);
-  Workouts.create({
-    name: "Bicep Curl",
-    duration: 20,
-    weight: 100,
-    reps: 10,
-    sets: 4,
-  }).then((newWork) => {
-    res.json(newWork);
-  });
+  console.log(JSON.parse(req.body));
+
+  //   Workouts.create(req.body).then((newWork) => {
+  //     res.json(newWork);
+  //   });
+});
+router.get("/api/workouts", async (req, res) => {
+  res.json(await Workouts.find());
 });
 
 router.put("/api/workouts/", ({ body }, res) => {});
