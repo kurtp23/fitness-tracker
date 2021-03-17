@@ -26,5 +26,5 @@ app.use(apiHtml);
 app.use(routesHtml);
 
 app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+  console.log(`App running on port http://localhost:${PORT} !`);
 });

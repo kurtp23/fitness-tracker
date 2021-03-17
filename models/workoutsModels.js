@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const WorkoutsDB = new Schema({
-  exerciseName: {
+  name: {
     type: String,
     trim: true,
     required: "Exercise Name is Required",
@@ -18,18 +18,18 @@ const WorkoutsDB = new Schema({
   sets: {
     type: Number,
     trim: true,
-    required: "weight is Required",
+    required: "sets is Required",
   },
 
   reps: {
     type: Number,
     trim: true,
-    required: "weight is Required",
+    required: "reps is Required",
   },
-  length: {
+  duration: {
     type: Number,
     trim: true,
-    required: "weight is Required",
+    required: "duration is Required",
   },
 
   userCreated: {
